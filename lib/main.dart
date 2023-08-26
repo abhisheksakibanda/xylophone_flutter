@@ -32,7 +32,7 @@ class XylophoneApp extends StatelessWidget {
     return Expanded(
       child: TextButton(
         onPressed: () => playSound(soundNumber),
-        child: Spacer(),
+        child: Container(),
         style: ButtonStyle(
           backgroundColor: MaterialStatePropertyAll(color),
         ),
