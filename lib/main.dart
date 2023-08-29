@@ -35,6 +35,14 @@ class XylophoneApp extends StatelessWidget {
         child: Container(),
         style: ButtonStyle(
           backgroundColor: MaterialStatePropertyAll(color),
+          overlayColor: MaterialStateProperty.resolveWith(
+            (states) {
+              if (states.contains(MaterialState.focused) ||
+                  states.contains(MaterialState.pressed))
+                return Colors.white.withOpacity(0.12);
+              return null;
+            },
+          ),
         ),
       ),
     );
